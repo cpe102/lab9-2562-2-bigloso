@@ -27,6 +27,7 @@ int main(){
 			}
 		else { 
 			cout << "Wrong input. Please input again.\n" ;
+			num-- ;
 		} 
 		num ++ ;
 	}while(grade != '0');
