@@ -9,14 +9,13 @@
 using namespace std ;
 
 int main(){
-    int count =0 ;
+    double count =0 ;
     float sum =0 ;
-    float asd , mean ;
+    float asd=0, mean ;
     string textline ;
     ifstream source("score.txt") ;
     while (getline(source,textline))
     {
-        cout << textline << endl ;
         sum += atof(textline.c_str()) ;
         asd +=pow(atof(textline.c_str()),2);
         count++ ;
@@ -24,7 +23,7 @@ int main(){
     
     cout << "Number of data = "<<count <<endl ;
     cout << "Mean = " << sum/count  << endl;
-    cout << "Standard deviation = " << sqrt(asd/count-pow((1/count)*sum,2)) ;
+    cout << "Standard deviation = " << sqrt(asd/count-pow(sum/count,2)) ;
     source.close();
     return 0 ;
 }
